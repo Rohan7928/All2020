@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/go_bg"
+    tools:context=".ui.gallery.GalleryFragment">
+ <com.mikhaellopez.circularimageview.CircularImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@drawable/background_nav_header_user_img"
+        android:elevation="9dp"
+        android:src="@drawable/go_second"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="1dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="8dp"
+                android:elevation="8dp"
+                android:id="@+id/card"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/profile_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimary"
+                        android:hint="User Name"
+                        android:padding="4dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="22dp"
+                            android:src="@drawable/ic_menu_camera" />
+
+                        <TextView
+                            android:id="@+id/profile_user_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="20dp"
+                            android:hint="E-Mail"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="22dp"
+                            android:src="@drawable/ic_menu_gallery" />
+
+                        <TextView
+                            android:id="@+id/profile_user_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="20dp"
+                            android:hint="Department"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="22dp"
+                            android:src="@drawable/ic_menu_share" />
+
+                        <TextView
+                            android:id="@+id/profile_user_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:hint="phone number"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/profile_teacher_edit"
+            android:layout_width="150dp"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="end"
+            android:text="Edit Details"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:background="@drawable/roundbutton"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+</LinearLayout>
